@@ -37,6 +37,6 @@ describe("Employee method", () => {
   it(`user selected role should retrieved through getRole()`, () => {
     const testRule = "Employee";
     const obj = new Employee(`John`, 1234, `test@example.com`, testRule);
-    expect(obj.getRole()).toEqual(testRule);
+    expect(obj.getRule()).toEqual(testRule);
   });
 });
