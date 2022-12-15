@@ -1,11 +1,12 @@
 const Intern = require("../lib/Intern");
 
 describe("Intern class", () => {
-  it(`should return an object containing a "name", "id", and "email" property when called with the "new" keyword`, () => {
+  it(`should return an object containing a "name", "id", "email" and "school" property when called with the "new" keyword`, () => {
     const obj = new Intern();
     expect("name" in obj).toEqual(true);
     expect("id" in obj).toEqual(true);
     expect("email" in obj).toEqual(true);
+    expect("school" in obj).toEqual(true);
   });
   it(`should create a school in the Intern object`, () => {
     const testSchool = "University of Toronto";
