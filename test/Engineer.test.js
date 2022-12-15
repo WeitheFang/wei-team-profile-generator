@@ -1,11 +1,12 @@
 const Engineer = require("../lib/Engineer");
 
 describe("Engineer class", () => {
-  it(`should return an object containing a "name", "id", and "email" property when called with the "new" keyword`, () => {
+  it(`should return an object containing a "name", "id", "email", and "gitHub" property when called with the "new" keyword`, () => {
     const obj = new Engineer();
     expect("name" in obj).toEqual(true);
     expect("id" in obj).toEqual(true);
     expect("email" in obj).toEqual(true);
+    expect("gitHub" in obj).toEqual(true);
   });
   it(`should create a github username in the engineer object`, () => {
     const gitHub = "test";
