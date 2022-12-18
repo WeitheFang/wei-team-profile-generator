@@ -6,6 +6,16 @@ const Manager = require("./lib/Manager");
 //npm packages
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
+
+//importing html templates
+const htmlTemplate = require("./src/htmlTemplate");
+
+//output directory
+const OUTPUT_DIR = path.resolve(__dirname, "dist");
+
+//output path
+const outputPath = path.join(OUTPUT_DIR, "teamProfile.html");
 
 //Create an array for the team members
 const teamMembers = [];
@@ -140,7 +150,12 @@ function addIntern() {
 
 //function for building the team
 function buildTeam() {
-  fs.writeFileSync();
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    fs.mkdirSync(OUTPUT_DIR);
+  } else {
+    fs.writeFileSync(outputPath, htmlTemplate(teamMembers), "utf-8");
+    console.log("Your team profile has been created!");
+  }
 }
 
 //function for initializing the app
