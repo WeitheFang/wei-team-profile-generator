@@ -26,7 +26,7 @@ const renderTeam = (teamMembers) => {
   //create function for render engineer
   const renderEngineer = (
     engineer
-  ) => `<div class="card col-3 me-3 mb-5 employee-card text-warning employee-card">
+  ) => `<div class="card col-3 me-3 mb-5 employee-card border-warning text-warning employee-card">
             <div class="card-header employee-header">
               <h2 class="card-title">${engineer.name}</h2>
               <h3 class="card-title">
