@@ -74,6 +74,7 @@ function addManager() {
         data.email,
         data.officeNumber
       );
+      console.table(manager);
       teamMembers.push(manager);
       addTeamMember();
     });
@@ -111,6 +112,7 @@ function addEngineer() {
         data.email,
         data.gitHub
       );
+      console.table(engineer);
       teamMembers.push(engineer);
       addTeamMember();
     });
@@ -143,6 +145,7 @@ function addIntern() {
     ])
     .then(function (data) {
       const intern = new Intern(data.name, data.id, data.email, data.gitHub);
+      console.table(intern);
       teamMembers.push(intern);
       addTeamMember();
     });
